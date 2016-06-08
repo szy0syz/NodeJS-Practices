@@ -1,1 +1,4 @@
-2016-06-08
+CreatedDate : 2016-06-08
+Title : Udemy - Learn Nodejs by building 10 projects (2015)
+URL: https://www.udemy.com/learn-nodejs-by-building-10-projects/
+CourseDescribe : Nodejs is open source cross platform environment for creating server side and network applications. It is built on the Chrome's JavaScript Runtime and can be used to build large scale web applications to quick time. It uses non blocken I/O and even driven model to allow creation of lightweight and highly scalable web applications. Our training program emphasizes on practical application of this amazing technology and will teach you nodejs development using real world application development.
