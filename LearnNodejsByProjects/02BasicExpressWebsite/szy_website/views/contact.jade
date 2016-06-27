@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    .container
+        form(method='post', aciton='contact/send')
+            h1 Contact
+            .form-group
+                span.label.label-info Name
+                input.form-control(type='text',name='name',placeholder='Enter Name')
+            .form-group
+                span.label.label-info Email
+                input.form-control(type='email',name='email',placeholder='Enter Email')
+            .form-group
+                span.label.label-info Message
+                textarea.form-control(name='message',placeholder='Enter Message')
+            button.btn.btn-info(type='submit') Sumbit
