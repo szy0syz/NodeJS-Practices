@@ -9,16 +9,24 @@ router.get('/', function(req, res, next) {
 
 router.post('/',function(req,res,next){
 	var transporter = nodemailer.createTransport({
-		service: 'Gmail',
+		service: 'QQ',
 		auth:{
-			user: 'szy0syz@gmail.com',
-			pass: '7y7szy7?'
+			user: '185505508@qq.com',
+			pass: 'uibadroulsyybhbj'
 		}
 	});
 
+	// var transporter = nodemailer.createTransport({
+	// 	service: 'Gmail',
+	// 	auth:{
+	// 		user: 'szy0syz@gmail.com',
+	// 		pass: '7y7szy7?'
+	// 	}
+	// });
+
 	mailOptions = {
-		from: 'szyQQ <185505508@qq.com>',
-		to: 'szy0syz@gmail.com',
+		from: '185505508@qq.com',
+		to: '185505508@qq.com',
 		subject: 'SZY_Website Submission',
 		text: 'You have a new Submission with the following details... Name: ' + req.body.name + ' Eamil: ' + req.body.email + ' Message: ' + req.body.message,
 		html: '<p>You got a new Submission with the following details</p><ul><li>Name: '+ req.body.name +'</li><li>Eamil: '+ req.body.email +'</li><li>Message: '+ req.body.message +'</li></ul>'
