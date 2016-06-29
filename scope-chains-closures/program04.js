@@ -1,11 +1,9 @@
 function foo () {
 	var bar;
 	quux = 'foo';
-
-	function zip () {
+	function zip() {
 		var quux = 'zip';
-		var bar = true;
+		bar = true;
 	}
-
 	return zip;
 }
