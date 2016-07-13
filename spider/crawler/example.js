@@ -2,7 +2,7 @@
 
 var Crawler = require('crawler');
 var expect = require('chai').expect;
-var httpbinHost = 'localhost:8000';
+var httpbinHost = 'ynamp.com';
 var sinon = require('sinon');
 var url = require('url');
 var c, spy;
@@ -40,7 +40,7 @@ describe('Simple test', function() {
             }
         });
         spy = sinon.spy(c, 'queue');
-        c.queue('http://'+httpbinHost+'/links/1/1');
+        c.queue('http://'+httpbinHost+'/about-us/');
     });
     it('should run the with an array queue', function(done) {
         c = new Crawler();
