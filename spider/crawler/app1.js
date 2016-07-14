@@ -6,12 +6,13 @@ var c = new Crawler({
     forceUTF8 : true //转换到utf8格式
 });
 
-var filterString = ['医院','福贡'];
+var config = require('./config');
+
 
 // Queue URLs with custom callbacks & parameters
 c.queue(
     [{ 
-    uri: 'http://www.yngp.com/bulletin.do?method=moreList&sign=0&districtCode=all', //每次get请求有20条公告消息
+    uri: config.uri, //每次get请求有20条公告消息
     jQuery: true,
 
     // The global callback won't be called
@@ -24,7 +25,7 @@ c.queue(
         			$(td).find('font').each(function(index,font){
         				//console.log($(font).attr('title'),'\n',$(font).attr('value'),'\n');
         				result.title = $(font).attr('title');
-        				result.value = $(font).attr('value');
+        				result.id = $(font).attr('value');
         			});
         		}
         		if(index == 1){
@@ -37,16 +38,21 @@ c.queue(
         		}
         	});
         	//console.log(result);
-        	resList.push(result)
+        	resList.push(result) 
         });
         //console.log('Body:\n', result.body);
 
-        //console.log(resList);
+        // filting   如果可以写入mongoDB
         resList.forEach(function(item,index){
         	//console.log(item.title);
         	var assert = false;
-        	filterString.forEach(function(filter,index){   
-        		if(assert) return;   		
+        	filterString.forEach(function(filter,f_index){   
+        		if(assert) {
+                    //写入mongoDB
+
+                    return;   
+                }
+
         		if(item.title.search(filter) != -1){
         		console.log(item.title);
         		assert = true;}
@@ -58,3 +64,5 @@ c.queue(
     }
     }]
 );
+
+// http://www.yngp.com/bulletin_zz.do?method=showBulletin&bulletin_id=516af8c0.155d5b7c9a6.-725a
