@@ -1,0 +1,874 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  
+  <head>
+    <title>采购人主菜单</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+    <meta http-equiv="MSThemeCompatible" content="no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <LINK href="/unieap/css/common/Style.css" rel="stylesheet"></LINK>
+    <link href="/css/style_list.css" rel="stylesheet" type="text/css" />
+    <link href="/css/dhtmlxtree.css" rel="stylesheet" type="text/css" />
+    <link href="/css/tabbar.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/unieap/css/ecside/ecside_style.css" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript">jQuery.noConflict();</script>
+    <script language="javascript" for="document" event="onkeydown" src="/unieap/js/entertotab.js"></script>
+    <script language=javascript src="/unieap/js/Common.js"></script>
+    <script language=javascript src="/unieap/js/listbox.js"></script>
+    <script type="text/javascript" src="/unieap/js/ecside/prototype_mini.js"></script>
+    <script type="text/javascript" src="/unieap/js/ecside/ecside_msg_gbk_cn.js"></script>
+    <script type="text/javascript" src="/unieap/js/ecside/ecside.js"></script>
+    <script type="text/javascript" src="/unieap/js/ecside/eapextend.js"></script>
+    <link rel="stylesheet" href="/unieap/css/UniEAP.css" type="text/css"></link>
+    <link href="/unieap/css/tab/unieapTab.css" rel="stylesheet" type="text/css" />
+    <script language="JavaScript" src="/unieap/js/constants/base/base_constants_zh_CN.js"></script>
+    <script language="JavaScript" src="/unieap/js/constants/lightcomponent/lightcomponent_constants_zh_CN.js"></script>
+    <script language=javascript src="/js/diagram.js"></script>
+    <script language=javascript src="/js/adjustIframeSize.js"></script>
+    <script language="JavaScript" src="/unieap/js/../../dwr/util.js"></script>
+    <script language="JavaScript" src="/unieap/js/../../dwr/engine.js"></script>
+    <script language="JavaScript" src="/unieap/js/dwr/dwrutil.js"></script>
+    <script language=javascript src="/unieap/js/Globals.js"></script>
+    <script language=javascript src="/unieap/js/DatePicker.js"></script>
+    <script language=javascript src="/unieap/js/TimePicker.js"></script>
+    <script language=javascript src="/unieap/js/Tree.js"></script>
+    <script language=javascript src="/unieap/js/DWManager.js"></script>
+    <script language=javascript src="/unieap/js/DWNameRule.js"></script>
+    <script language=javascript src="/unieap/js/DataWindow.js"></script>
+    <script language=javascript src="/unieap/js/DWFacade.js"></script>
+    <script language=javascript src="/unieap/js/BaseObj.js"></script>
+    <script language=javascript src="/unieap/js/EAPObjsMgr.js"></script>
+    <script type="text/javascript" src="/unieap/js/ecside/ecside.js"></script>
+    <script language=javascript src="/unieap/js/NumberObj.js"></script>
+    <script language=javascript src="/unieap/js/DateObj.js"></script>
+    <script language=javascript src="/unieap/js/DoubleObj.js"></script>
+    <script language=javascript src="/unieap/js/IDCardObj.js"></script>
+    <script language=javascript src="/unieap/js/IntegerObj.js"></script>
+    <script language=javascript src="/unieap/js/MoneyObj.js"></script>
+    <script language=javascript src="/unieap/js/PasswordConfirmObj.js"></script>
+    <script language=javascript src="/unieap/js/PasswordObj.js"></script>
+    <script language=javascript src="/unieap/js/PosIntegerObj.js"></script>
+    <script language=javascript src="/unieap/js/ReadOnlyFieldObj.js"></script>
+    <script language=javascript src="/unieap/js/ReadOnlyObj.js"></script>
+    <script language=javascript src="/unieap/js/TextObj.js"></script>
+    <script language=javascript src="/unieap/js/TextAreaObj.js"></script>
+    <script language=javascript src="/unieap/js/SelectObj.js"></script>
+    <script language=javascript src="/unieap/js/QuickSelectObj.js"></script>
+    <script language=javascript src="/unieap/js/FormatNumber.js"></script>
+    <script language=javascript src="/unieap/js/CursorDispose.js"></script>
+    <script language=javascript src="/unieap/js/EmailObj.js"></script>
+    <script language=javascript src="/unieap/js/datawindow/asyRequest.js"></script>
+    <script language=javascript scr="/unieap/js/tab/tabApi.js"></script>
+    <script type="text/javascript" src="/unieap/js/combobox/doubleCombo.js"></script>
+    <script language=javascript src="/unieap/js/constants/base/base_constants_zh_CN.js"></script>
+    <script language=javascript src="/unieap/js/constants/commontree/commontree_constants_zh_CN.js"></script>
+    <script language=javascript src="/unieap/js/treehandle.js"></script>
+    <script language=javascript src="/unieap/js/treeAPI.js"></script>
+    <script language=javascript src="/unieap/js/popmenu/fw_menu.js"></script>
+    <script language=javascript src="/unieap/js/popmenu/fw_menuEvent.js"></script>
+    <script language="JavaScript" src="/js/dhtmlxcommon.js"></script>
+    <script language="JavaScript" src="/js/dhtmlxtree.js"></script>
+    <script language="JavaScript" src="/js/dxtree.js"></script>
+  </head>
+  <style type="text/css">
+    <!-- body { margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; background-color: #FFFFFF; } .STYLE1 { color: #3195c9; font-size: 12px; } .STYLE2 { color: #FFFFFF; font-size: 12px; font-weight: bold; } .STYLE3 { color: #FFFFFF; font-size: 12px; } .STYLE4 { color: #3195c9; font-weight: bold; font-size: 12px; } .STYLE5 { color: #666666; font-size: 12px; } .STYLE8 { color: #3195c7; font-size: 12px; } .STYLE10{ color: #FFFFFF; font-size: 12px; font-weight: bold; } #listArea{ position:relative; top:17px; width:775px; height:30px; border:1px solid #ffffff; } #myListOneBody{ position:absolute; left:0px; top:0px; width:200px; height:30px; border:1px solid #ffffff; } #myListOneLeft{ position:aboslute; left:0px; top:0px; } #myListOneMid{ position:absolute; left:5px; top:0px; width:190px; height:30px; background:url(/images/merch/333_15.jpg) repeat-x; } #myListOneMid_word{ position:relative; left:12px; top:7px; } #myListOneRight{ position:absolute; right:0px; top:0px; } #myListOneBody_One{ position:absolute; left:0px; top:0px; width:200px; height:30px; border:1px solid #ffffff; } #myListOneLeft_One{ position:aboslute; left:0px; top:0px; } #myListOneMid_One{ position:absolute; left:5px; top:0px; width:190px; height:30px; background:url(/images/merch/333_10.jpg) repeat-x; } #myListOneMid_word_One{ position:relative; left:12px; top:5px; } #myListOneRight_One{ position:absolute; right:0px; top:0px; } #myListTwoBody{ position:absolute; left:205px; top:0px; width:110px; height:30px; border:1px solid #ffffff; } #myListTwoLeft{ position:absolute; left:10px; top:0px; } #myListTwoMid{ position:absolute; top:0px; left:20px; width:90px; height:30px; background:url(/images/merch/333_10.jpg) repeat-x; } #myListTwoMid_word{ position:relative; left:5px; top:7px; } #myListTwoRight{ position:absolute; right:0px; top:0px; } #myListTwoBody_Two{ position:absolute; left:205px; top:0px; width:110px; height:30px; border:1px solid #ffffff; } #myListTwoLeft_Two{ position:absolute; left:10px; top:0px; } #myListTwoMid_Two{ position:absolute; top:0px; left:20px; width:90px; height:30px; background:url(/images/merch/333_15.jpg) repeat-x; } #myListTwoMid_word_Two{ position:relative; left:5px; top:7px; } #myListTwoRight_Two{ position:absolute; right:0px; top:0px; } #myListThreeBody{ position:absolute; left:330px; top:0px; width:135px; height:30px; border:1px solid #ffffff; } #myListThreeLeft{ position:absolute; left:0px; top:0px; } #myListThreeMid{ position:absolute; top:0px; left:13px; width:120px; height:30px; background:url(/images/merch/333_10.jpg) repeat-x; } #myListThreeMid_word{ position:relative; left:3px; top:7px; } #myListThreeRight{ position:absolute; right:0px; top:0px; } #myListThreeBody_Three{ position:absolute; left:330px; top:0px; width:135px; height:30px; border:1px solid #ffffff; } #myListThreeLeft_Three{ position:absolute; left:0px; top:0px; } #myListThreeMid_Three{ position:absolute; top:0px; left:13px; width:120px; height:30px; background:url(/images/merch/333_15.jpg) repeat-x; } #myListThreeMid_word_Three{ position:relative; left:3px; top:7px; } #myListThreeRight_Three{ position:absolute; right:0px; top:0px; } #myListFourBody{ position:absolute; left:480px; top:0px; width:138px; height:30px; border:1px solid #ffffff; } #myListFourLeft{ position:absolute; left:0px; top:0px; } #myListFourMid{ position:absolute; top:0px; left:13px; width:120px; height:30px; background:url(/images/merch/333_10.jpg) repeat-x; } #myListFourMid_word{ position:relative; left:3px; top:7px; } #myListFourRight{ position:absolute; right:0px; top:0px; } #myListFourBody_Four{ position:absolute; left:480px; top:0px; width:138px; height:30px; border:1px solid #ffffff; } #myListFourLeft_Four{ position:absolute; left:0px; top:0px; } #myListFourMid_Four{ position:absolute; top:0px; left:13px; width:120px; height:30px; background:url(/images/merch/333_15.jpg) repeat-x; } #myListFourMid_word_Four{ position:relative; left:3px; top:7px; } #myListFourRight_Four{ position:absolute; right:0px; top:0px; } #myListFiveBody{ position:absolute; left:633px; top:0px; width:140px; height:30px; border:1px solid #ffffff; } #myListFiveLeft{ position:absolute; left:0px; top:0px; } #myListFiveMid{ position:absolute; top:0px; left:13px; width:120px; height:30px; background:url(/images/merch/333_10.jpg) repeat-x; } #myListFiveMid_word{ position:relative; left:5px; top:7px; } #myListFiveRight{ position:absolute; right:0px; top:0px; } #myListFiveBody_Five{ position:absolute; left:633px; top:0px; width:140px; height:30px; border:1px solid #ffffff; } #myListFiveLeft_Five{ position:absolute; left:0px; top:0px; } #myListFiveMid_Five{ position:absolute; top:0px; left:13px; width:120px; height:30px; background:url(/images/merch/333_15.jpg) repeat-x; } #myListFiveMid_word_Five{ position:relative; left:5px; top:7px; } #myListFiveRight_Five{ position:absolute; right:0px; top:0px; } #listLine{ position:relative; left:-150px; top:9px; } #myListLine{ color:#badbec; width:950px; height:1px; } --></style>
+  
+  <body onload="eapObjsMgr.onReady();" onbeforeunload=";removeDataStoreFromSession();">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+      <tr id="main_3" style="display">
+        <td align="center" valign="top">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="5"></td>
+            </tr>
+            <tr style="cursor: hand">
+              <td height="30">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="11">
+                      <img src="/images/main09.jpg" width="11" height="30" /></td>
+                    <td align="left" valign="middle" background="/images/main01.jpg">
+                      <span class="STYLE2" onclick="cxtj();">
+                        <div id='title'>您当前的位置：首页>>采购公告</div></span>
+                    </td>
+                    <td width="11">
+                      <img src="/images/main08.jpg" width="11" height="30" /></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr id="cxtj" style="display:">
+              <td background="/images/main153.jpg">
+                <form id="EAPForm" name="EAPForm" method="POST" action="/resource/.do" onsubmit="if(checkValue()){assambleXMLData(this); return true;} return false;">
+                  <input type="hidden" id="method" name="method" />
+                  <input type="hidden" id="FORWARD_NAME_IN_PARTLY_REFRESH" name="FORWARD_NAME_IN_PARTLY_REFRESH">
+                  <input type="hidden" id="dwNames" name="dwNames" />
+                  <table border="0" cellpadding="0" cellspacing="0">
+                    <td width="68" align="right">
+                      <span class="STYLE8">公告标题：</span></td>
+                    <td width="50">
+                      <input type="text" prompt="公告标题" name="bulletintitle" maxlength="256" search="false" size="16" isnullable="true" id="bulletintitle" class="NEUHTCInput" JSObjName="Text" onkeydown="eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab();eapObjsMgr.getEAPObj(this).getBaseObj().checktextvalue();" onkeypress="eapObjsMgr.getEAPObj(this).OnlyNumber()" onkeyup="eapObjsMgr.getEAPObj(this).getBaseObj().checktextvalue()" /></td>
+                    <td width="91" align="right">
+                      <span class="STYLE8">发布时间：</span></td>
+                    <td width="237">
+                      <input type="text" prompt="起始发起时间" dateformat="YYYY-MM-DD" currentDate="2016-07-14" name="startTime" search="false" isnullable="true" style="width:80px" id="startTime" class="NEUHTCInput" JSObjName="Date" onkeydown="eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()" onkeypress="eapObjsMgr.getEAPObj(this).OnlyNumber()" style="ime-mode:disabled" />
+                      <span class="STYLE8">至</span>
+                      <input type="text" style="width:80px" name="endTime" id="endTime" currentDate="2016-07-14" prompt="终止发起时间" isnullable="true" preDate="startTime" dateformat="YYYY-MM-DD" search="false" class="NEUHTCInput" JSObjName="Date" onkeydown="eapObjsMgr.getEAPObj(this).getBaseObj().enterToTab()" onkeypress="eapObjsMgr.getEAPObj(this).OnlyNumber()" style="ime-mode:disabled" /></td>
+                    <td>
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td width="10">
+                              <img src="/images/sy_1_10.jpg" width="10" height="20"></td>
+                            <td background="/images/sy_1_12.jpg" class="STYLE10" style="cursor:pointer" onclick="doQuery('EAPForm','bulletinstable')">查询</td></tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </table>
+                </form>
+              </td>
+            </tr>
+          </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="">
+            <tr class="newinfotr1">
+              <div id="listArea">
+                <div id="myListOneBody">
+                  <div id="myListOneLeft">
+                    <img src="/images/merch/333_13.jpg" /></div>
+                  <div id="myListOneMid" onclick="userful(1,'listOne','listTwo','listThree','listFour','listFive');">
+                    <div id="myListOneMid_word">
+                      <label id="listOne" name="tabpage">
+                        <font color="#000000">招标(谈判、询价、更正)公告</font></label>
+                    </div>
+                  </div>
+                  <div id="myListOneRight">
+                    <img src="/images/merch/333_16.jpg" /></div>
+                </div>
+                <div id="myListOneBody_One" style="display:none;">
+                  <div id="myListOneLeft_One">
+                    <img src="/images/merch/333_08.jpg" /></div>
+                  <div id="myListOneMid_One" onclick="userful(1,'listOne','listTwo','listThree','listFour','listFive');">
+                    <div id="myListOneMid_word_One">
+                      <label id="listOne" name="tabpage">
+                        <font color="#FFFFFF">招标(谈判、询价、更正)公告</font></label>
+                    </div>
+                  </div>
+                  <div id="myListOneRight_One">
+                    <img src="/images/merch/333_11.jpg" /></div>
+                </div>
+                <div id="myListTwoBody">
+                  <div id="myListTwoLeft">
+                    <img src="/images/merch/333_08.jpg" /></div>
+                  <div id="myListTwoMid" onclick="userful(2,'listOne','listTwo','listThree','listFour','listFive');">
+                    <div id="myListTwoMid_word">
+                      <label id="listTwo" name="tabpage">
+                        <font color="#FFFFFF">采购结果公告</font></label>
+                    </div>
+                  </div>
+                  <div id="myListTwoRight">
+                    <img src="/images/merch/333_11.jpg" /></div>
+                </div>
+                <div id="myListTwoBody_Two" style="display:none;">
+                  <div id="myListTwoLeft">
+                    <img src="/images/merch/333_13.jpg" /></div>
+                  <div id="myListTwoMid_Two" onclick="userful(2,'listOne','listTwo','listThree','listFour','listFive');">
+                    <div id="myListTwoMid_word_Two">
+                      <label id="listTwo" name="tabpage">采购结果公告</label></div>
+                  </div>
+                  <div id="myListTwoRight_Two">
+                    <img src="/images/merch/333_16.jpg" /></div>
+                </div>
+                <div id="myListThreeBody">
+                  <div id="myListThreeLeft">
+                    <img src="/images/merch/333_08.jpg" /></div>
+                  <div id="myListThreeMid" onclick="userful(3,'listOne','listTwo','listThree','listFour','listFive');">
+                    <div id="myListThreeMid_word">
+                      <label id="listThree" name="tabpage">
+                        <font color="#FFFFFF">单一来源审核前公示</font></label>
+                    </div>
+                  </div>
+                  <div id="myListThreeRight">
+                    <img src="/images/merch/333_11.jpg" /></div>
+                </div>
+                <div id="myListThreeBody_Three" style="display:none;">
+                  <div id="myListThreeLeft_Three">
+                    <img src="/images/merch/333_13.jpg" /></div>
+                  <div id="myListThreeMid_Three" onclick="userful(3,'listOne','listTwo','listThree','listFour','listFive');">
+                    <div id="myListThreeMid_word_Three">
+                      <label id="listThree" name="tabpage">单一来源审核前公示</label></div>
+                  </div>
+                  <div id="myListThreeRight_Three">
+                    <img src="/images/merch/333_16.jpg" /></div>
+                </div>
+                <div id="myListFourBody">
+                  <div id="myListFourLeft">
+                    <img src="/images/merch/333_08.jpg" /></div>
+                  <div id="myListFourMid" onclick="userful(4,'listOne','listTwo','listThree','listFour','listFive');">
+                    <div id="myListFourMid_word">
+                      <label id="listFour" name="tabpage">
+                        <font color="#FFFFFF">进口产品审核前公示</font></label>
+                    </div>
+                  </div>
+                  <div id="myListFourRight">
+                    <img src="/images/merch/333_11.jpg" /></div>
+                </div>
+                <div id="myListFourBody_Four" style="display:none;">
+                  <div id="myListFourLeft_Four">
+                    <img src="/images/merch/333_13.jpg" /></div>
+                  <div id="myListFourMid_Four" onclick="userful(4,'listOne','listTwo','listThree','listFour','listFive');">
+                    <div id="myListFourMid_word_Four">
+                      <label id="listFour" name="tabpage">进口产品审核前公示</label></div>
+                  </div>
+                  <div id="myListFourRight_Four">
+                    <img src="/images/merch/333_16.jpg" /></div>
+                </div>
+                <!-- 新增“州县级采购合同公告” add by shi_yang 2014-03-17 begin -->
+                <div id="myListFiveBody">
+                  <div id="myListFiveLeft">
+                    <img src="/images/merch/333_08.jpg" /></div>
+                  <div id="myListFiveMid" onclick="userful(5,'listOne','listTwo','listThree','listFour','listFive');">
+                    <div id="myListFiveMid_word">
+                      <label id="listFive" name="tabpage">
+                        <font color="#FFFFFF">&nbsp;&nbsp;&nbsp;采购合同公告</font></label>
+                    </div>
+                  </div>
+                  <div id="myListFiveRight">
+                    <img src="/images/merch/333_11.jpg" /></div>
+                </div>
+                <div id="myListFiveBody_Five" style="display:none;">
+                  <div id="myListFiveLeft_Five">
+                    <img src="/images/merch/333_13.jpg" /></div>
+                  <div id="myListFiveMid_Five" onclick="userful(5,'listOne','listTwo','listThree','listFour','listFive');">
+                    <div id="myListFiveMid_word_Five">
+                      <label id="listFive" name="tabpage">&nbsp;&nbsp;&nbsp;采购合同公告</label></div>
+                  </div>
+                  <div id="myListFiveRight_Five">
+                    <img src="/images/merch/333_16.jpg" /></div>
+                </div>
+                <!-- 新增“州县级采购合同公告” add by shi_yang 2014-03-17 end --></div>
+              <div id="listLine">
+                <hr id="myListLine" /></div>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type='hidden' name='sign' id='sign' value='1' />
+          <form id="bulletinstable" method="post" style="width:100%;visibility :hidden;" nearPages="3" maxRowsExported="10000000" minColWidth="80" action="/bulletin.do?method=moreList">
+            <div class="ecSide" id="bulletinstable_main_content" style="width:100%;">
+              <!-- ECS_AJAX_ZONE_PREFIX__begin_ bulletinstable_ECS_AJAX_ZONE_SUFFIX -->
+              <div>
+                <input type="hidden" name="ec_i" value="bulletinstable" />
+                <input type="hidden" name="bulletinstable_efn" />
+                <input type="hidden" name="bulletinstable_crd" value="20" />
+                <input type="hidden" name="bulletinstable_p" value="1" />
+                <input type="hidden" name="bulletinstable_s_bulletintitle" />
+                <input type="hidden" name="bulletinstable_s_codeName" />
+                <input type="hidden" name="bulletinstable_s_finishday" />
+                <input type="hidden" name="sign" value="0" />
+                <input type="hidden" name="districtCode" value="all" />
+                <input type="hidden" name="method" value="moreList" />
+                <input type="hidden" name="bulletinstable_totalpages" value="2903" />
+                <input type="hidden" name="bulletinstable_totalrows" value="58054" /></div>
+              <table id="bulletinstable_table" border="0" cellspacing="0" cellpadding="0" class="tableRegion" width="100%">
+                <thead id="bulletinstable_table_head">
+                  <tr>
+                    <td valign="middle" columnName="bulletintitle" sortable="true" editTemplate="ecs_t_input" width="75%" class="tableHeader" onmouseover="ECSideUtil.lightHeader(this,'bulletinstable');" onmouseout="ECSideUtil.unlightHeader(this,'bulletinstable');" oncontextmenu="ECSideUtil.showColmunMenu(event,this,'bulletinstable');" onmouseup="ECSideUtil.doSort(event,'bulletintitle','asc','bulletinstable');" title="排序 公告标题">
+                      <span class="columnSeparator">&#160;</span>
+                      <div class="headerTitle">公告标题</div></td>
+                    <td valign="middle" columnName="codeName" sortable="true" editTemplate="ecs_t_input" width="10%" class="tableHeader" onmouseover="ECSideUtil.lightHeader(this,'bulletinstable');" onmouseout="ECSideUtil.unlightHeader(this,'bulletinstable');" oncontextmenu="ECSideUtil.showColmunMenu(event,this,'bulletinstable');" onmouseup="ECSideUtil.doSort(event,'codeName','asc','bulletinstable');" title="排序 区划">
+                      <span class="columnSeparator">&#160;</span>
+                      <div class="headerTitle">区划</div></td>
+                    <td valign="middle" columnName="finishday" sortable="true" editTemplate="ecs_t_input" width="15%" class="tableHeader" onmouseover="ECSideUtil.lightHeader(this,'bulletinstable');" onmouseout="ECSideUtil.unlightHeader(this,'bulletinstable');" oncontextmenu="ECSideUtil.showColmunMenu(event,this,'bulletinstable');" onmouseup="ECSideUtil.doSort(event,'finishday','asc','bulletinstable');" title="排序 发布时间">
+                      <span class="columnSeparator">&#160;</span>
+                      <div class="headerTitle">发布时间</div></td>
+                  </tr>
+                </thead>
+                <tbody id="bulletinstable_table_body">
+                  <tr id="452dd754.155d5b802a8.-7750" class="odd " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="452dd754.155d5b802a8.-7750">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="YSJYZX（公）2016-19：砚山县公务用车制度改革取消车辆的评估机构、拍卖机构、补遗公告(B包：拍卖机构)" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="452dd754.155d5b802a8.-7750"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">文山州</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-14</td></tr>
+                  <tr id="-54cbb3d9.155d5b7ef56.-72f3" class="even " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="-54cbb3d9.155d5b7ef56.-72f3">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="CG-2016085Z：大理州财政局部署DBCS系统所需软硬件和集成服务公开招标采购项目招标公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="-54cbb3d9.155d5b7ef56.-72f3"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">大理州</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-14</td></tr>
+                  <tr id="-4d326f2a.155d5b7c9a6.-710c" class="odd " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="-4d326f2a.155d5b7c9a6.-710c">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="昆采竞2016112022：昆明市城市基本建设档案馆“媒资管理系统软件”竞争性谈判公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="-4d326f2a.155d5b7c9a6.-710c"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">昆明市</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-14</td></tr>
+                  <tr id="516af8c0.155d5b7c9a6.-7433" class="even " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="516af8c0.155d5b7c9a6.-7433">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="YYLCSJ-政采-20160523：双江拉祜族佤族布朗族傣族自治县公安局双江自治县新型城市防控体系二期工程建设项目招标公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="516af8c0.155d5b7c9a6.-7433"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">临沧市</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-14</td></tr>
+                  <tr id="-54cbb3d9.155d5b7ef56.-7342" class="odd " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="-54cbb3d9.155d5b7ef56.-7342">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="HHZB-CX-2016-013：永仁县2016年省级农村能源农村节柴灶采购项目询价公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="-54cbb3d9.155d5b7ef56.-7342"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">楚雄州</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-14</td></tr>
+                  <tr id="-4d326f2a.155d5b7c9a6.-719c" class="even " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="-4d326f2a.155d5b7c9a6.-719c">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="BSDSDH-2016-147：关于瑞丽市市场监督管理局检验检测仪器设备采购公开招标公告的补遗公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="-4d326f2a.155d5b7c9a6.-719c"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">德宏州</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-14</td></tr>
+                  <tr id="-4d326f2a.155d5b7c9a6.-719d" class="odd " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="-4d326f2a.155d5b7c9a6.-719d">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="BSDSDH-2016-184：德宏州卫生和计划生育委员会消杀药品采购更正公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="-4d326f2a.155d5b7c9a6.-719d"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">德宏州</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-14</td></tr>
+                  <tr id="516af8c0.155d5b7c9a6.-74a7" class="even " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="516af8c0.155d5b7c9a6.-74a7">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="HZCG2016（公）-29：会泽县思源学校食堂设施采购安装项目变更公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="516af8c0.155d5b7c9a6.-74a7"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">曲靖市</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-14</td></tr>
+                  <tr id="516af8c0.155d5b7c9a6.-74a8" class="odd " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="516af8c0.155d5b7c9a6.-74a8">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="HZCG2016（公）-30：会泽县思源学校课桌椅、床铺、教师办公家具采购安装项目变更公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="516af8c0.155d5b7c9a6.-74a8"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">曲靖市</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-14</td></tr>
+                  <tr id="-71680ef4.155d5b83dea.-7141" class="even " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="-71680ef4.155d5b83dea.-7141">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="YXDD2016-ZB0708：红塔区区域乡村建设规划竞争性磋商公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="-71680ef4.155d5b83dea.-7141"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">玉溪市</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-14</td></tr>
+                  <tr id="516af8c0.155d5b7c9a6.-74bb" class="odd " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="516af8c0.155d5b7c9a6.-74bb">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="0702-1640CITC27140：春苑小学东校区室外消防水池土建工程竞争性谈判公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="516af8c0.155d5b7c9a6.-74bb"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">昆明市</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-13</td></tr>
+                  <tr id="-4d326f2a.155d5b7c9a6.-71f6" class="even " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="-4d326f2a.155d5b7c9a6.-71f6">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="F5300000000616001309：昆明市官渡区地方税务局办公大楼应急电源系统采购竞争性谈判公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="-4d326f2a.155d5b7c9a6.-71f6"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">昆明市</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-13</td></tr>
+                  <tr id="452dd754.155d5b802a8.-785a" class="odd " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="452dd754.155d5b802a8.-785a">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="YNTTCG2016352：云南民族大学教学科研数码设备采购项目（四次）竞争性谈判公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="452dd754.155d5b802a8.-785a"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">省级</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-13</td></tr>
+                  <tr id="66d149e8.155d5b81719.-601c" class="even " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="66d149e8.155d5b81719.-601c">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="O5300000000516001348：云南省安全生产监督管理局全省重点建设项目安全检查专家服务采购项目竞争性磋商公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="66d149e8.155d5b81719.-601c"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">省级</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-13</td></tr>
+                  <tr id="66d149e8.155d5b81719.-6120" class="odd " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="66d149e8.155d5b81719.-6120">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="F5300000000616001319：昆明市官渡区科学技术和信息化局官渡区政府国投大厦互联网上网行为管理设备采购项目询价公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="66d149e8.155d5b81719.-6120"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">昆明市</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-13</td></tr>
+                  <tr id="66d149e8.155d5b81719.-6125" class="even " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="66d149e8.155d5b81719.-6125">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="QH招-BN20160127：西双版纳傣族自治州环境保护局设备采购项目更正公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="66d149e8.155d5b81719.-6125"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">版纳州</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-13</td></tr>
+                  <tr id="452dd754.155d5b802a8.-7887" class="odd " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="452dd754.155d5b802a8.-7887">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="BSDSDH-2016-146：盈江县公安局厨房设备采购项目废标公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="452dd754.155d5b802a8.-7887"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">德宏州</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-13</td></tr>
+                  <tr id="-54cbb3d9.155d5b7ef56.-7482" class="even " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="-54cbb3d9.155d5b7ef56.-7482">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="MSCG(竞)2016-173（D）：芒市遮放镇户拉明德小学10KV/0.4KV线路及配变安装工程采购招标公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="-54cbb3d9.155d5b7ef56.-7482"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">德宏州</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-13</td></tr>
+                  <tr id="-71680ef4.155d5b83dea.-7145" class="odd " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="-71680ef4.155d5b83dea.-7145">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="DHCG（竞）2016-016（D）：德宏州人民医院放射科磁共振机房屏蔽工程采购竞争性谈判" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="-71680ef4.155d5b83dea.-7145"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">德宏州</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-13</td>
+                    </tr>
+                  <tr id="452dd754.155d5b802a8.-7888" class="even " onclick="ECSideUtil.selectRow(this,'bulletinstable');" onmouseover="ECSideUtil.lightRow(this,'bulletinstable');" onmouseout="ECSideUtil.unlightRow(this,'bulletinstable');" recordKey="452dd754.155d5b802a8.-7888">
+                    <td style="class:columnhead;text-align:left;padding-left: 20px" width="75%">
+                      <font id="showcontant_toolong" length="20" title="YXDD2016-ZB0614（1）：玉溪师范学院锅炉采购安装项目（二次）竞争性谈判公告" style="cursor: hand;color:blue" onmouseover="this.style.color='black';" onmouseout="this.style.color='blue'" onclick="showBulletin(this)" value="452dd754.155d5b802a8.-7888"></font>
+                    </td>
+                    <td style="class:columnhead;text-align:center;padding-left:20px" width="10%">玉溪市</td>
+                    <td style="text-align:center;padding-left:20px" width="15%">2016-07-13</td>
+                  </tr>
+                </tbody>
+              </table>
+              <iframe style="border:0px;" marginwidth="0" marginheight="0" frameborder="0" border="0" width="0" height="0" id="bulletinstable_ecs_export_iframe" name="bulletinstable_ecs_export_iframe"></iframe>
+              <div id="bulletinstable_toolbar" class="toolbar" style="width:100%;">
+                <table id="bulletinstable_toolbarTable" class="toolbarTable" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td class="pageNavigationTool" nowrap="nowrap">
+                      <input type="button" disabled="disabled" class="pageNav firstPageD" onclick="ECSideUtil.gotoPage(1,'bulletinstable');" title="第一页" />
+                      <input type="button" disabled="disabled" class="pageNav prevPageD" onclick="ECSideUtil.gotoPage(0,'bulletinstable');" title="上一页" /></td>
+                    <td class="pageNavigationTool" nowrap="nowrap">
+                      <input type="button" class="pageNav nextPage" onclick="ECSideUtil.gotoPage(2,'bulletinstable');" title="下一页" />
+                      <input type="button" class="pageNav lastPage" onclick="ECSideUtil.gotoPage(2903,'bulletinstable');" title="最末页" /></td>
+                    <td class="separatorTool">&#160;</td>
+                    <td class="pageJumpTool" nowrap="nowrap" onmouseover="ECSideUtil.NearPagesBar.showMe(this,'bulletinstable');" onmouseout="ECSideUtil.NearPagesBar.hideMe(this,'bulletinstable');">
+                      <nobr>
+                        <input type="button" class="pageNav jumpPage" onclick="ECSideUtil.gotoPageByInput(this,'bulletinstable');" />
+                        <input type="text" name="bulletinstable_pg" value="1" class="jumpPageInput" onkeydown="if (event.keyCode && event.keyCode==13 ) {ECSideUtil.gotoPageByInput(this,'bulletinstable');;return false; } " />/2903页</nobr></td>
+                    <td class="separatorTool">&#160;</td>
+                    <td class="pageSizeTool" nowrap="nowrap">每页
+                      <select name="bulletinstable_rd" onchange="ECSideUtil.changeRowsDisplayed('bulletinstable',this);">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="20" selected="selected">20</option>
+                        <option value="50">50</option></select>条</td>
+                    <td class="separatorTool">&#160;</td>
+                    <td nowrap="nowrap" class="statusTool">
+                      <nobr>共58054条记录,显示1到20</nobr></td>
+                  </tr>
+                </table>
+              </div>
+              <div id="bulletinstable_toolbarShadow" style="display:none;"></div>
+              <!-- ECS_AJAX_ZONE_PREFIX_ _end_bulletinstable_ECS_AJAX_ZONE_SUFFIX --></div>
+          </form>
+          <div id="bulletinstable_waitingBar" class="waitingBar"></div>
+          <div id="bulletinstable_waitingBarCore" class="waitingBarCore"></div>
+          <script type="text/javascript">(function() {
+              var gird = ECSideUtil.createGird('bulletinstable');
+              gird.useAjax = true;
+              gird.doPreload = false;
+              gird.isClassic = true;
+            })();</script>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+</html>
+<script language="JavaScript">< !--
+  //返回
+  var _wHeight = window.screen.height * 0.65;
+  var _wWidth = window.screen.width * 0.65;
+  var _iTop = (window.screen.height - 30 - _wHeight) / 2; //获得窗口的垂直位置;
+  var _iLeft = (window.screen.width - 10 - _wWidth) / 2; //获得窗口的水平位置;
+  var feapub = 'toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,top=' + _iTop + ',left=' + _iLeft + ',',
+  feaNews = feapub + 'width=' + _wWidth + ',height=' + _wHeight,
+  feaNo = feapub + 'width=' + _wWidth + ',height=' + _wHeight,
+  feaMustKnow = feapub + 'width=780px,height=450px'
+  var feafast = 'toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes,location=yes,width=900px,heigth=600px';
+  function inittable() {
+    setTimeout("doQuery('EAPForm','bulletinstable')", 0);
+  }
+  var myFlag = "null";
+  var myDistrict = "null";
+  var mycode = 'all';
+  var sign = 0;
+  var checkSign = 0;
+  var flag = 0;
+  if (myFlag != null) {
+    inittable();
+    myInit();
+  }
+  function myInit() {
+    if (myFlag == null) {
+      sign = 0;
+      mycode = 'all';
+    } else {
+      myuserful(myFlag, "listOne", "listTwo", "listThree", "listFour", "listFive");
+    }
+  }
+
+  //add by zhangmm 页面标题设置 20131029 start
+  function doMyQuery(districtCode, districtCodename, mySign) {
+
+    mycode = districtCode;
+    if (mySign == '0') {
+      if (document.getElementById("listOne").parentElement.className == "titlebt") {
+        sign = 1;
+      } else if (document.getElementById("listTwo").parentElement.className == "titlebt") {
+        sign = 2;
+      } else if (document.getElementById("listThree").parentElement.className == "titlebt") {
+        sign = 3;
+      } else if (document.getElementById("listFour").parentElement.className == "titlebt") {
+        sign = 4;
+      } else if (document.getElementById("listFive").parentElement.className == "titlebt") {
+        sign = 5;
+      } else {
+        sign = 0;
+      }
+
+    } else {
+      if (document.getElementById("listOne").parentElement.className == "titlebt") {
+        sign = 1;
+      } else if (document.getElementById("listTwo").parentElement.className == "titlebt") {
+        sign = 2;
+      } else if (document.getElementById("listThree").parentElement.className == "titlebt") {
+        sign = 3;
+      } else if (document.getElementById("listFour").parentElement.className == "titlebt") {
+        sign = 4;
+      } else if (document.getElementById("listFive").parentElement.className == "titlebt") {
+        sign = 5;
+      }
+    }
+    document.getElementById("bulletintitle").value = '';
+    document.getElementById("startTime").value = '';
+    document.getElementById("endTime").value = '';
+
+    var queryPara = {
+      "sign": sign,
+      "query_bulletintitle": null,
+      "query_startTime": null,
+      "query_endTime": null,
+      "districtCode": districtCode
+    };
+
+    ECSideUtil.queryECForm('bulletinstable', queryPara, true);
+
+    document.getElementById("title").innerHTML = '您当前的位置：首页>>采购公告>>' + districtCodename;
+  }
+  //add by zhangmm 页面标题设置 20131029 end
+  //表格查询
+  function doQuery(queryFormName, listFormName) {
+    if (!check()) {
+      return;
+    }
+    var query_sign = 1;
+
+    var queryForm = $(queryFormName);
+    flag = sign;
+    if (checkSign == 1) {
+      var queryPara = {
+        "query_bulletintitle": queryForm["bulletintitle"].value,
+        "query_startTime": queryForm["startTime"].value,
+        "query_endTime": queryForm["endTime"].value,
+        "query_sign": 1,
+        "flag": flag,
+        "listSign": 0
+      };
+    } else {
+      var queryPara = {
+        "query_bulletintitle": queryForm["bulletintitle"].value,
+        "query_startTime": queryForm["startTime"].value,
+        "query_endTime": queryForm["endTime"].value,
+        "query_sign": 0
+      };
+    }
+
+    ECSideUtil.queryECForm(listFormName, queryPara, true);
+  }
+  //add by zhangmm 点击tab提交请求 20131029 start
+  function doListQuery(queryFormName, listFormName) {
+    var queryForm = $(queryFormName);
+    if (mycode == "all" && sign == "1") {
+      sign = 0;
+    }
+    if (document.getElementById("bulletintitle").value != "" || document.getElementById("startTime").value != "" || document.getElementById("endTime").value != "") {
+      doQuery('EAPForm', 'bulletinstable');
+    } else {
+      if (checkSign == 1) {
+        var queryPara = {
+
+          "sign": sign,
+          "districtCode": mycode,
+          "flag": flag,
+          "listSign": 1
+        };
+      } else {
+        var queryPara = {
+          "sign": sign,
+          "districtCode": mycode,
+          "flag": flag,
+          "listSign": 0
+        };
+      }
+      ECSideUtil.queryECForm(listFormName, queryPara, true);
+    }
+  }
+  //add by zhangmm 点击tab提交请求 20131029 end
+  function replaced(path) {
+    parent.document.getElementById("mainFrame").src = path;
+  }
+  function cxtj() {
+    var obj = document.getElementById("cxtj");
+    if (obj.style.display == "") {
+      obj.style.display = "none";
+
+    } else {
+      obj.style.display = "";
+
+    }
+  }
+  function showMain(i) {
+    for (var x = 1; x < 4; x++) {
+      var obj = document.getElementById("main_" + x);
+      if (x != i) {
+        obj.style.display = "none";
+      } else {
+        obj.style.display = "";
+      }
+    }
+  }
+  //查询公告详细信息
+  function showBulletin(obj) {
+    if (obj.value == "always_show1") {
+      var url = "/purchasedetail.do?method=contractList";
+      window.open(url);
+      return;
+    }
+    var bullitenid = obj.value;
+    var url = "/bulletin_zz.do?method=showBulletin&bulletin_id=" + bullitenid;
+    window.open(url, "", "width=1280,height=800,location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=yes,toolbar=no");
+  }
+
+  //add by zhangmm tab菜单切换 20131029 start
+  function userful(tab, id1, id2, id3, id4, id5) {
+
+    checkSign = 1;
+    if (tab == 1) {
+      var oWorkItem = "listOne";
+    } else if (tab == 2) {
+      var oWorkItem = "listTwo";
+    } else if (tab == 3) {
+      var oWorkItem = "listThree";
+    } else if (tab == 4) {
+      var oWorkItem = "listFour";
+    } else if (tab == 5) {
+      var oWorkItem = "listFive";
+    }
+
+    if (oWorkItem == id1) {
+      //document.getElementById(id1).parentElement.className = "titlebt";
+      document.getElementById(id1).parentElement.className = "";
+      document.getElementById(id2).parentElement.className = "";
+      document.getElementById(id3).parentElement.className = "";
+      document.getElementById(id4).parentElement.className = "";
+      document.getElementById(id5).parentElement.className = "";
+      document.getElementById(id1).parentElement.background = "";
+      document.getElementById(id2).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id3).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id4).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id5).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById("myListTwoBody_Two").style.display = "none"document.getElementById("myListTwoBody").style.display = "inline"document.getElementById("myListThreeBody_Three").style.display = "none"document.getElementById("myListThreeBody").style.display = "inline"document.getElementById("myListFourBody_Four").style.display = "none"document.getElementById("myListFourBody").style.display = "inline"document.getElementById("myListFiveBody_Five").style.display = "none"document.getElementById("myListFiveBody").style.display = "inline"document.getElementById("myListOneBody_One").style.display = "none";
+      document.getElementById("myListOneBody").style.display = "inline";
+      document.getElementById("sign").value = '1';
+
+    } else if (oWorkItem == id2) {
+      document.getElementById(id1).parentElement.className = "";
+      document.getElementById(id2).parentElement.className = "titlebt";
+      document.getElementById(id3).parentElement.className = "";
+      document.getElementById(id4).parentElement.className = "";
+      document.getElementById(id5).parentElement.className = "";
+      document.getElementById(id1).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id2).parentElement.background = "";
+      document.getElementById(id3).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id4).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id5).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById("myListOneBody_One").style.display = "inline";
+      document.getElementById("myListOneBody").style.display = "none";
+      document.getElementById("myListTwoBody_Two").style.display = "inline"document.getElementById("myListTwoBody").style.display = "none"document.getElementById("myListThreeBody_Three").style.display = "none";
+      document.getElementById("myListThreeBody").style.display = "inline";
+      document.getElementById("myListFourBody_Four").style.display = "none";
+      document.getElementById("myListFourBody").style.display = "inline";
+      document.getElementById("myListFiveBody_Five").style.display = "none";
+      document.getElementById("myListFiveBody").style.display = "inline";
+      document.getElementById("sign").value = '2';
+
+    } else if (oWorkItem == id3) {
+      document.getElementById(id1).parentElement.className = "";
+      document.getElementById(id2).parentElement.className = "";
+      document.getElementById(id3).parentElement.className = "titlebt";
+      document.getElementById(id4).parentElement.className = "";
+      document.getElementById(id5).parentElement.className = "";
+      document.getElementById(id1).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id2).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id3).parentElement.background = "";
+      document.getElementById(id4).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id5).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById("myListOneBody_One").style.display = "inline";
+      document.getElementById("myListOneBody").style.display = "none";
+      document.getElementById("myListTwoBody_Two").style.display = "none"document.getElementById("myListTwoBody").style.display = "inline"document.getElementById("myListThreeBody_Three").style.display = "inline";
+      document.getElementById("myListThreeBody").style.display = "none";
+      document.getElementById("myListFourBody_Four").style.display = "none";
+      document.getElementById("myListFourBody").style.display = "inline";
+      document.getElementById("myListFiveBody_Five").style.display = "none";
+      document.getElementById("myListFiveBody").style.display = "inline";
+      document.getElementById("sign").value = '3';
+
+    } else if (oWorkItem == id4) {
+
+      document.getElementById(id1).parentElement.className = "";
+      document.getElementById(id2).parentElement.className = "";
+      document.getElementById(id3).parentElement.className = "";
+      document.getElementById(id4).parentElement.className = "titlebt";
+      document.getElementById(id5).parentElement.className = "";
+      document.getElementById(id1).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id2).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id3).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id4).parentElement.background = "";
+      document.getElementById(id5).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById("myListOneBody_One").style.display = "inline";
+      document.getElementById("myListOneBody").style.display = "none";
+      document.getElementById("myListTwoBody_Two").style.display = "none"document.getElementById("myListTwoBody").style.display = "inline"document.getElementById("myListThreeBody_Three").style.display = "none";
+      document.getElementById("myListThreeBody").style.display = "inline";
+      document.getElementById("myListFourBody_Four").style.display = "inline";
+      document.getElementById("myListFourBody").style.display = "none";
+      document.getElementById("myListFiveBody_Five").style.display = "none";
+      document.getElementById("myListFiveBody").style.display = "inline";
+      document.getElementById("sign").value = '4';
+    } else if (oWorkItem == id5) {
+
+      document.getElementById(id1).parentElement.className = "";
+      document.getElementById(id2).parentElement.className = "";
+      document.getElementById(id3).parentElement.className = "";
+      document.getElementById(id4).parentElement.className = "";
+      document.getElementById(id5).parentElement.className = "titlebt";
+      document.getElementById(id1).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id2).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id3).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id4).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id5).parentElement.background = "";
+      document.getElementById("myListOneBody_One").style.display = "inline";
+      document.getElementById("myListOneBody").style.display = "none";
+      document.getElementById("myListTwoBody_Two").style.display = "none"document.getElementById("myListTwoBody").style.display = "inline"document.getElementById("myListThreeBody_Three").style.display = "none";
+      document.getElementById("myListThreeBody").style.display = "inline";
+      document.getElementById("myListFourBody_Four").style.display = "none";
+      document.getElementById("myListFourBody").style.display = "inline";
+      document.getElementById("myListFiveBody_Five").style.display = "inline";
+      document.getElementById("myListFiveBody").style.display = "none";
+      document.getElementById("sign").value = '5';
+    }
+    sign = document.getElementById("sign").value;
+
+    doListQuery('EAPForm', 'bulletinstable');
+  }
+
+  function myuserful(tab, id1, id2, id3, id4, id5) {
+    checkSign = 1;
+    if (tab == 1) {
+      var oWorkItem = "listOne";
+    } else if (tab == 2) {
+      var oWorkItem = "listTwo";
+    } else if (tab == 3) {
+      var oWorkItem = "listThree";
+    } else if (tab == 4) {
+      var oWorkItem = "listFour";
+    } else if (tab == 5) {
+      var oWorkItem = "listFive";
+    } else if (tab == 6) {
+      var oWorkItem = "listFive";
+    }
+
+    if (oWorkItem == id1) {
+      document.getElementById(id1).parentElement.className = "titlebt";
+      document.getElementById(id2).parentElement.className = "";
+      document.getElementById(id3).parentElement.className = "";
+      document.getElementById(id4).parentElement.className = "";
+      document.getElementById(id5).parentElement.className = "";
+      document.getElementById(id1).parentElement.background = "";
+      document.getElementById(id2).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id3).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id4).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id5).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById("myListTwoBody_Two").style.display = "none"document.getElementById("myListTwoBody").style.display = "inline"document.getElementById("myListThreeBody_Three").style.display = "none"document.getElementById("myListThreeBody").style.display = "inline"document.getElementById("myListFourBody_Four").style.display = "none"document.getElementById("myListFourBody").style.display = "inline"document.getElementById("myListFiveBody_Five").style.display = "none"document.getElementById("myListFiveBody").style.display = "inline"document.getElementById("myListOneBody_One").style.display = "none";
+      document.getElementById("myListOneBody").style.display = "inline";
+      document.getElementById("sign").value = '1';
+
+    } else if (oWorkItem == id2) {
+      document.getElementById(id1).parentElement.className = "";
+      document.getElementById(id2).parentElement.className = "titlebt";
+      document.getElementById(id3).parentElement.className = "";
+      document.getElementById(id4).parentElement.className = "";
+      document.getElementById(id5).parentElement.className = "";
+      document.getElementById(id1).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id2).parentElement.background = "";
+      document.getElementById(id3).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id4).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id5).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById("myListOneBody_One").style.display = "inline";
+      document.getElementById("myListOneBody").style.display = "none";
+      document.getElementById("myListTwoBody_Two").style.display = "inline"document.getElementById("myListTwoBody").style.display = "none"document.getElementById("myListThreeBody_Three").style.display = "none";
+      document.getElementById("myListThreeBody").style.display = "inline";
+      document.getElementById("myListFourBody_Four").style.display = "none";
+      document.getElementById("myListFourBody").style.display = "inline";
+      document.getElementById("myListFiveBody_Five").style.display = "none";
+      document.getElementById("myListFiveBody").style.display = "inline";
+      document.getElementById("sign").value = '2';
+
+    } else if (oWorkItem == id3) {
+      document.getElementById(id1).parentElement.className = "";
+      document.getElementById(id2).parentElement.className = "";
+      document.getElementById(id3).parentElement.className = "titlebt";
+      document.getElementById(id4).parentElement.className = "";
+      document.getElementById(id5).parentElement.className = "";
+      document.getElementById(id1).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id2).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id3).parentElement.background = "";
+      document.getElementById(id4).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id5).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById("myListOneBody_One").style.display = "inline";
+      document.getElementById("myListOneBody").style.display = "none";
+      document.getElementById("myListTwoBody_Two").style.display = "none"document.getElementById("myListTwoBody").style.display = "inline"document.getElementById("myListThreeBody_Three").style.display = "inline";
+      document.getElementById("myListThreeBody").style.display = "none";
+      document.getElementById("myListFourBody_Four").style.display = "none";
+      document.getElementById("myListFourBody").style.display = "inline";
+      document.getElementById("myListFiveBody_Five").style.display = "none";
+      document.getElementById("myListFiveBody").style.display = "inline";
+      document.getElementById("sign").value = '3';
+    } else if (oWorkItem == id4) {
+      document.getElementById(id1).parentElement.className = "";
+      document.getElementById(id2).parentElement.className = "";
+      document.getElementById(id3).parentElement.className = "";
+      document.getElementById(id4).parentElement.className = "titlebt";
+      document.getElementById(id5).parentElement.className = "";
+      document.getElementById(id1).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id2).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id3).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id4).parentElement.background = "";
+      document.getElementById(id5).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById("myListOneBody_One").style.display = "inline";
+      document.getElementById("myListOneBody").style.display = "none";
+      document.getElementById("myListTwoBody_Two").style.display = "none"document.getElementById("myListTwoBody").style.display = "inline"document.getElementById("myListThreeBody_Three").style.display = "none";
+      document.getElementById("myListThreeBody").style.display = "inline";
+      document.getElementById("myListFourBody_Four").style.display = "inline";
+      document.getElementById("myListFourBody").style.display = "none";
+      document.getElementById("myListFiveBody_Five").style.display = "none";
+      document.getElementById("myListFiveBody").style.display = "inline";
+      document.getElementById("sign").value = '4';
+    } else if (oWorkItem == id5) {
+      document.getElementById(id1).parentElement.className = "";
+      document.getElementById(id2).parentElement.className = "";
+      document.getElementById(id3).parentElement.className = "";
+      document.getElementById(id4).parentElement.className = "";
+      document.getElementById(id5).parentElement.className = "titlebt";
+      document.getElementById(id1).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id2).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id3).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id4).parentElement.background = "/images/main01_ynzc.jpg";
+      document.getElementById(id5).parentElement.background = "";
+      document.getElementById("myListOneBody_One").style.display = "inline";
+      document.getElementById("myListOneBody").style.display = "none";
+      document.getElementById("myListTwoBody_Two").style.display = "none"document.getElementById("myListTwoBody").style.display = "inline"document.getElementById("myListThreeBody_Three").style.display = "none";
+      document.getElementById("myListThreeBody").style.display = "inline";
+      document.getElementById("myListFourBody_Four").style.display = "none";
+      document.getElementById("myListFourBody").style.display = "inline";
+      document.getElementById("myListFiveBody_Five").style.display = "inline";
+      document.getElementById("myListFiveBody").style.display = "none";
+      document.getElementById("sign").value = '5';
+    }
+    sign = document.getElementById("sign").value;
+
+  }
+  //add by zhangmm tab菜单切换 20131029 end
+  --></script>
