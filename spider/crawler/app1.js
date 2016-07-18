@@ -3,7 +3,7 @@ var url = require('url');
 var mongoose = require('mongoose');
 var config = require('./config');
 
-mongoose.connect('mongodb://localhost/yngp');
+mongoose.connect('mongodb://szy0syz:afjwdbxp@localhost/yngp');
 var schema = new mongoose.Schema({
     id: String,
     title: String,
