@@ -44,7 +44,12 @@ function readFile(path,filesList) {
 
 var filesList = getFileList("C:/Users/Administrator/Documents/GitHub/NodeJS-Practices/test/data");
 
-// console.log(filesList.length);
+//console.log(filesList.length);
+
+
+if(filesList.length<=0) {
+	console.log("no files.");
+}
 
 filesList.forEach(function(item,index)
 {
@@ -52,7 +57,7 @@ filesList.forEach(function(item,index)
 	fs.createReadStream(item.path)
 	  .pipe(unzip.Parse())
 	  .on('error',function(err){
-	  	console.log(err);
+	  	console.log('@@@@');
 	  })
 	  .on('entry', function (entry) {
 	  	if(!entry){
