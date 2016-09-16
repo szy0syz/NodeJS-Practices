@@ -20,13 +20,13 @@ var app = express();
 
 //------
 app.use(session({
-  secret: settings.cookieSecret,
-  key: settings.db,//cookie name
-  cookie: {maxAge: 1000 * 60 * 60 * 24 * 30},//30 days
+  //secret: settings.cookieSecret,
+  secret: 'szy_blog_20160916',
+  //ttl: 14 * 24 * 60 * 60, // = 14 days. Default
+  //key: settings.db,//cookie name
+  //cookie: {maxAge: 1000 * 60 * 60 * 24 * 30},//30 days
   store: new MongoStore({
-    db: settings.db,
-    host: settings.host,
-    port: settings.port
+  	url: 'mongodb://localhost/blog'
   })
 }));
 
