@@ -49,4 +49,8 @@ Temporary Items
 # NA
 /spider/crawler/node_modules
 /hexo/node_modules
+<<<<<<< HEAD
 /blog/node_modules
+=======
+/test/node_modules
+>>>>>>> ff88b7c6051d27597fea14b2ba426f3e56679b11
