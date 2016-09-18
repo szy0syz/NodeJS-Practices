@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 //--------------
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
+var flash = require('connect-flash');
 
 // settings db
 var settings = require('./settings');
@@ -22,14 +23,17 @@ var app = express();
 app.use(session({
   //secret: settings.cookieSecret,
   secret: 'szy_blog_20160916',
-  //ttl: 14 * 24 * 60 * 60, // = 14 days. Default
-  //key: settings.db,//cookie name
-  //cookie: {maxAge: 1000 * 60 * 60 * 24 * 30},//30 days
+  ttl: 14 * 24 * 60 * 60, // = 14 days. Default
+  key: settings.db,//cookie name
+  resave: true,
+  saveUninitialized: true,
+  cookie: {maxAge: 1000 * 60 * 60 * 24 * 30},//30 days
   store: new MongoStore({
-  	url: 'mongodb://localhost/blog'
+  	url: settings.mongodbUrl
   })
 }));
 
+app.use(flash());
 //------
 
 // view engine setup
