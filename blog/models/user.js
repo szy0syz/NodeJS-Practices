@@ -44,10 +44,16 @@ User.prototype.save = function(callback) {
   // });
 
   MongoClient.connect(settings.url, function(err, db) {
-    if(err) return callback(err); //错误，返回 err 信息
-    console.log("Connected correctly to server");
-    
-    
+    // if(err) return callback(err); //错误，返回 err 信息
+    // console.log("Connected correctly to server");
+
+    //读取 users 集合
+    var col = db.collection('users');
+    col.insertOne(user,{w:1},function(err,res){
+      if(err) console.log('inserted err...');
+      console.log('inserted:' + res.titel);
+      db.close();
+    })
   });
 
 };
