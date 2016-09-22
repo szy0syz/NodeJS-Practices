@@ -46,10 +46,14 @@ router.post('/reg', function(req, res, next) {
         req.flash('error', err);
         res.redirect('/reg');//注册失败返回主册页
       } else {
-        //req.session.user = user;//用户信息存入 session (old code,err~~~~~) 如何存session研究
+        console.log('-----ss------' + Date.now());
+        console.log(user.insertedCount); //为什么要执行两次？
+        console.log('-----ss------' + Date.now());
+        //req.session.user = user.ops[0];//用户信息存入 session (old code,err~~~~~) 如何存session研究
         req.flash('success', '注册成功了!');
-        //res.render('index', { title: req.flash('success') });
-        res.redirect('/');//注册成功后返回主页
+        // res.render('index', { title: req.flash('success') });
+        res.render('index', { title: user });
+        //res.redirect('/');//注册成功后返回主页
       }
       
     });
